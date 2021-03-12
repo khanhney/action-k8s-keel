@@ -6,7 +6,7 @@ let should = chai.should();
 
 chai.use(chaiHttp);
 //Our parent block
-describe('Pets', () => {
+describe('MainService', () => {
     beforeEach((done) => {
         //Before each test we empty the database in your case
         done();
@@ -25,7 +25,7 @@ describe('Pets', () => {
                     res.should.have.status(200);
                     res.body.should.be.a('object');
                     res.body.should.have.property('result').eql(obj.expected);
-                    done();
+                    setImmediate(done);
                 });
         });
     });

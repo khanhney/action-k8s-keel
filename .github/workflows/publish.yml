@@ -38,7 +38,9 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: khanhney/demo-github-action-keel:$GITHUB_SHA
+          name: khanhney/demo-github-action-keel
+          # snapshot: true
+          tags: "$GITHUB_SHA"
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

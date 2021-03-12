@@ -33,14 +33,12 @@ jobs:
 
       - name: Build and push
         id: docker_build
-        # uses: docker/build-push-action@v2
-        uses: HurricanKai/Publish-Docker-Github-Action@master
+        uses: docker/build-push-action@v2
         with:
           context: ./
           file: ./Dockerfile
           push: true
           name: khanhney/demo-github-action-keel
-          snapshot: true
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

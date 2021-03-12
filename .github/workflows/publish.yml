@@ -38,7 +38,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          name: khanhney/demo-github-action-keel
+          tags: khanhney/demo-github-action-keel:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

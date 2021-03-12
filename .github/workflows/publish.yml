@@ -9,6 +9,10 @@ on:
     -  master
     -  develop
     -  feature/*
+  pull_request:
+    branches:
+    -  master
+    -  develop
 
 jobs:
   build:

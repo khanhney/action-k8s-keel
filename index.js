@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000;
 let dotenv  = require('dotenv');
 
 app.get('/check-health', (req, res) => {
-    res.json({ status: 'active', message: 'healthy' });
+    res.json({ status: 'active', message: 'healthy_with_DE' });
 });
 
 app.get('/add/:numA/:numB', (req, res) => {
